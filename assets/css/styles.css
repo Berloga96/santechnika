@@ -1,0 +1,737 @@
+/* стили для прижатия футера на главной странице*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Занимаем всю высоту экрана */
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+}
+
+.content{
+    margin-left: 250px;
+    max-width: 1440px; /* Максимальная ширина */
+    min-height: calc(100vh - 160px);
+    padding-bottom: 30px;
+    /* margin: 0 auto; */
+
+}
+
+
+.content_galery{
+    min-height: calc(100vh - 160px);
+    padding-bottom: 30px;
+}
+
+/* центрование контейнера с заказами */
+.content_center{
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Выравнивание по горизонтали */
+    /* align-items: center; Выравнивание по вертикали */
+    height: 100vh; /* Высота блока на весь экран (настрой под себя) */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.content_center th{
+    margin: 0px 40px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 81vh; Минимальная высота — весь экран */
+}
+
+
+.main-title{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    font-size: 48px; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+
+}
+
+.main-title-catalog{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 48px; /* Размер шрифта заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+
+}
+
+.main-descr{
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0px;
+    font-size: 24px; /* Размер шрифта описания */
+    color: #555; /* Цвет текста */
+}
+.page{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 24px;
+}
+
+.wrapper_cart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* min-height: 83vh; Минимальная высота — весь экран */
+
+}
+
+.tabl{
+    max-width: 1000px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.tabl td {
+    text-align: center;
+
+}
+/* логин контент */
+.main_login{
+    max-width: 39%;
+    margin: 0 auto;
+
+}
+
+.main_registr{
+    max-width: 36%;
+    margin: 0 auto;
+
+}
+main {
+    flex: 1; /* Основное содержимое растягивается, чтобы занять оставшееся пространство */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer_down{
+    /* position: fixed; Фиксированное позиционирование */
+     bottom: 0; /*Прижимаем к низу */
+    width: 100%; /* Ширина на всю страницу */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 10px 0; /* Внутренние отступы */
+
+}
+
+
+
+/* задний фон */
+
+.man {
+    width: 100%;
+    height: 800px;
+    background-image: url('/images/background.png');
+    background-size: cover;
+
+}
+
+
+/* Стили для хедера */
+.site-header {
+    background-color: #333; /* Цвет фона хедера */
+    padding: 10px 20px; /* Отступы внутри хедера */
+    color: #fff; /* Цвет текста */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для хедера */
+}
+
+/* Контейнер для элементов хедера */
+.header-container {
+    display: flex; /* Используем Flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Распределяем элементы по ширине */
+    max-width: 1440px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    /* padding: 0 20px; Отступы внутри контейнера */
+
+}
+
+/* Стили для логотипа */
+.logo img {
+    height: 50px; /* Высота логотипа */
+    width: auto; /* Ширина автоматически подстраивается */
+}
+
+/* Стили для названия сайта */
+.site-name {
+    flex-grow: 1; /* Название занимает всё доступное пространство */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.site-name h1 {
+    margin: 0; /* Убираем отступы у заголовка */
+    margin-right: -196px;
+    font-size: 40px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Стили для кнопки выхода */
+.logout .logout-button {
+    background-color: #ff4757; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругляем углы */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.logout .logout-button:hover {
+    background-color: #ff6b81; /* Цвет фона при наведении */
+}
+
+/* адаптив. Добавим медиа-запросы для разных разрешений экра */
+/* Для мобильной версии (до 768px) */
+
+@media (max-width: 768px) {
+    .header-container {
+        max-width: 100%; /* Контейнер на всю ширину */
+        flex-direction: column; /* Элементы в столбик */
+        text-align: center; /* Центрирование текста */
+    }
+
+    .logo img {
+        height: 40px; /* Уменьшаем логотип */
+    }
+
+    .site-name h1 {
+        font-size: 20px; /* Уменьшаем размер шрифта */
+    }
+
+    .logout .logout-button {
+        padding: 8px 16px; /* Уменьшаем отступы кнопки */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+}
+
+
+/* Для экранов 1280px: */
+@media (min-width: 769px) and (max-width: 1280px) {
+    .header-container {
+        max-width: 1200px; /* Ширина контейнера */
+    }
+}
+
+/* Для экранов 1440px: */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .header-container {
+        max-width: 1300px; /* Ширина контейнера */
+    }
+}
+
+/* Для экранов 1920px и больше: */
+@media (min-width: 1441px) {
+    .header-container {
+        max-width: 1400px; /* Ширина контейнера */
+    }
+}
+
+
+/* стили навигации   */
+
+/*ширина кнопок навигации  */
+.nav-container {
+    /* display: flex; /* Используем Flexbox */
+    /* align-items: center; Выравниваем элементы по вертикали */
+    /* justify-content: space-between; Распределяем элементы по ширине */ 
+    max-width: 1440px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0px 0px; /* Отступы внутри контейнера */
+}
+
+/* кнопка выход */
+
+.logo-user{
+    display: flex;
+    gap: 20px;
+    
+    
+    
+}
+.logo-user .sp{
+    line-height: 25px;
+}
+
+.logo-out{
+    /* margin-top: 10px; */
+    background-color: #a2c2e4;
+    
+    width: 106px;
+    height: 24px;
+    border-radius: 10px;
+    text-align: center;
+    
+
+}
+.logo-out-a{
+    text-decoration: none;
+    line-height: 24px;
+    color:rgb(145, 17, 17);
+}
+
+nav ul {
+    display: flex; /* Используем Flexbox */
+    /* align-items: center; Выравниваем элементы по вертикали */
+    justify-content: space-between;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* иконки на главной странице */
+
+.services{
+    /* display: flex; */
+    justify-content: space-between; /* Равное расстояние между кнопками */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    /* width: 100%; Ширина контейнера */
+    max-width: 900px; /* Максимальная ширина (настрой под себя) */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 60px 0px; /* Внутренние отступы */
+}
+
+
+
+/* стили для слайдера */
+
+/* Стили для контейнера слайдера */
+.swiper-container {
+    width: 100%;
+    /* height: 300px; Высота слайдера */
+    margin: 0px auto;
+    /* position: relative; Важно: контейнер должен иметь относительное позиционирование */
+    /* overflow: hidden; Скрыть все, что выходит за пределы контейнера */
+}
+
+/* Стили для слайдов */
+.swiper-slide {
+    width: calc(100% / 3 - 10px); /* Ширина слайда (3 слайда с отступами) */
+    margin-right: 10px; /* Отступ между слайдами */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для изображений внутри слайдов */
+.swiper-slide img {
+        width: 90%; /* Ширина изображения на всю ширину слайда */
+        height: 100%; /* Высота изображения на всю высоту слайда */
+        object-fit: contain; /* Сохраняет пропорции без обрезки */
+        /* object-fit: cover; Сохраняет пропорции и обрезает изображение, если нужно */
+    }
+
+
+
+
+/* Стили для навигационных кнопок */
+.swiper-button-next, .swiper-button-prev {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 30%;
+    /* position: absolute; Абсолютное позиционирование для кнопок */
+    top: 50%; /* Выравнивание по вертикали */
+    transform: translateY(-50%); /* Центрирование кнопок */
+    z-index: 10; /* Убедитесь, что кнопки выше слайдов */
+}
+
+.swiper-button-next {
+    right: 10px; /* Позиция кнопки "Вперед" */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Позиция кнопки "Назад" */
+}
+
+/* Стили для пагинации (точек) */
+.swiper-pagination {
+    background-color: #ffffff;
+    margin-top: 20px;
+    position: static; /* Абсолютное позиционирование для пагинации */
+    bottom: 0px; /* Расположение пагинации внизу */
+    left: 50%; /* Центрирование по горизонтали */
+    /* transform: translateX(-50%); Точное центрирование */
+    z-index: 10; /* Убедитесь, что пагинация выше слайдов */
+    display: flex; /* Чтобы точки отображались в строку */
+    justify-content: center; /* Центрирование точек */
+}
+
+.swiper-pagination-bullet {
+    background-color: #1f0870; /* Цвет точек */
+    opacity: 0.5; /* Прозрачность неактивных точек */
+    margin: 0 5px; /* Отступ между точками */
+    width: 10px; /* Ширина точки */
+    height: 10px; /* Высота точки */
+    border-radius: 50%; /* Круглая форма */
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1; /* Активная точка */
+}
+
+
+/* Основные стили для каталога */
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters input, .filters select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+} */
+
+/* ff */
+.product img {
+    max-width: 100%; /* Изображение не будет превышать ширину контейнера */
+    /* height: auto; Сохраняем пропорции */
+    border-radius: 5px;
+    border: 10px;
+    border-color: aqua;
+    max-height: 200px; /* Ограничиваем высоту */
+}
+
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.product form {
+    margin-top: 10px;
+}
+
+.product form input[type='number'] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.product form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product form button:hover {
+    background-color: #0056b3;
+}
+
+.checkout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 200px;
+    /* text-align: center; */
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Анимация мигания */
+@keyframes blink {
+    0% { background-color: #f0f8ff; } /* Светло-голубой */
+    50% { background-color: #add8e6; } /* Голубой */
+    100% { background-color: #f0f8ff; } /* Светло-голубой */
+}
+
+.blink {
+    animation: blink 1s ease-in-out 2; /* Мигание 2 раза */
+}
+
+
+/* анимация для кнопки "Обновить" */
+@keyframes buttonPulse { 
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.updating {
+    animation: buttonPulse 0.5s ease-in-out infinite;
+}
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4CAF50; /* Зеленый для успешных уведомлений */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.notification.error {
+    background-color: #f44336; /* Красный для ошибок */
+}
+
+.hidden {
+    display: none;
+}
+
+#notification-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Стили для кнопок на странице "Спасибо" */
+.thank-you-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий цвет */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Темно-синий при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.fas {
+    margin-right: 10px;
+}
+
+.privacy{
+    padding: 60px 0px;
+}
+
+/* стиль на главной для кнопок */
+.serv{
+    display: flex;
+    justify-content: space-around;
+    margin: 60px;
+
+}
+
+/* стиль для  */
+.servis_img{
+
+    margin-top: 40px;
+    width: 100%;
+    height: 800px;
+    background-image: url('/images/bg1.png');
+    background-size: cover;
+
+}
+
+/* стили для новостей */
+.news-img{
+    position: relative;
+    background-image: url("/images/news.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 0; 
+    height: 1400px;
+    width: 100%;
+    overflow: hidden; /* Заблокировать прокрутку фона */
+}
+
+.serv-h1{
+    position: relative;
+    /* top: 50%; /* Позиция по вертикали */
+     left: 50%; /* Позиция по горизонтали */ 
+    margin-top: -1300px;
+    width: 440px;
+    height: 150px;
+    border-radius: 50px;
+    border: solid #1f0870;
+    background: #ffffff;
+    transform: translate(-50%, -50%); /* Центрирование текста */
+    /* color: white; Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 1; /* Текст поверх фона */
+}
+
+.serv-h2{
+    position: relative;
+    padding-top: 5px;
+    left: 50%; /* Позиция по горизонтали */ 
+    margin-top: -1000px;
+    width: 800px;
+    height: 50px;
+    border-radius: 50px;
+    border: solid #1f0870;
+    background: #ffffff;
+    transform: translate(-50%, -50%); /* Центрирование текста */
+    /* color: white; Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 1; /* Текст поверх фона */
+}
+.social-container {
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Выравниваем по центру по горизонтали */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    gap: 20px; /* Расстояние между иконками */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #f9f9f9; /* Цвет фона */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.social-container i {
+    font-size: 100px; /* Размер иконок */
+    color: #333; /* Цвет иконок */
+    margin: 0 10px; /* Отступы между иконками */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.social-container i:hover {
+    color: #007bff; /* Цвет при наведении */
+}
+
+/* стили для о нас */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.description h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.description p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.description strong {
+    color: #007bff;
+}
+
+/* стиль кнопка связь со мной */
+.mail{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contact-button {
+    /* display: inline-block; */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 350px;
+    height: 50px;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
